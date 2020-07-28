@@ -1,0 +1,29 @@
+  
+<div class="container">
+  <button class="btn-tambah" mat-raised-button color="primary" (click)="tambahBuku()">Tambah Pesanan</button>
+  <mat-card>
+      <mat-card-content>
+          <mat-list>
+              <mat-list-item *ngFor="let item of dataBuku">
+                  <img matListAvatar src="assets/book2.png" alt="...">
+
+                  <p matLine>
+                      <span>{{item.judul}} </span>
+                  </p>
+                  <p matLine>
+                      <span>{{item.penerbit}} </span>
+                  </p>
+                  <p matLine>
+                      <span>{{item.pengarang}} </span>
+                  </p>
+                  <p matLine>
+                      <span>{{item.harga}}</span>
+                  </p>
+                  <button class="btn-edit" mat-raised-button color="accent" (click)="editBuku(item)">Ubah</button>
+                  <button class="btn-selesai" mat-raised-button color="warn"
+                      (click)="hapusBuku(item.id)">Hapus</button>
+              </mat-list-item>
+          </mat-list>
+      </mat-card-content>
+  </mat-card>
+</div>

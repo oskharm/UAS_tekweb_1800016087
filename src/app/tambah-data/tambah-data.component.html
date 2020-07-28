@@ -1,0 +1,28 @@
+<h3 mat-dialog-title>Tambah Buku</h3>
+<div mat-dialog-content>
+    <mat-form-field style="width: 100%;">
+        <mat-label>Nama Buku</mat-label>
+        <input matInput [(ngModel)]="data.judul">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Penerbit Buku</mat-label>
+        <input matInput [(ngModel)]="data.penerbit">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Harga Buku</mat-label>
+        <input matInput [(ngModel)]="data.harga">
+    </mat-form-field>
+
+    <mat-form-field style="width: 100%;">
+        <mat-label>Pengarang Buku</mat-label>
+        <input matInput [(ngModel)]="data.pengarang">
+    </mat-form-field>
+</div>
+
+<mat-dialog-actions>
+    <span class="spacer"></span>
+    <button mat-button mat-dialog-close>Batal</button>    
+    <button mat-raised-button color="primary" [mat-dialog-close]="true" (click)="simpan(data)">Simpan</button>
+</mat-dialog-actions>
